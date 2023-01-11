@@ -1,0 +1,97 @@
+.navbar-container {
+  background-color: #e9f8fa;
+  color: #222;
+  padding: 3rem 0;
+  max-width: 90%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .heading-secondary {
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin-left: 2rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+
+    .head:link,
+    .head:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+    .head:hover,
+    .head:active {
+      text-decoration: none;
+      color: #222;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    ul {
+      list-style: none;
+
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .link:link,
+      .link:visited {
+        text-decoration: none;
+        color: inherit;
+
+        .contact {
+          background-color: #22b8cf;
+          padding: 0.7rem 4.8rem;
+          border-radius: 9px;
+        }
+
+        .contact:hover {
+          background-color: #1fa6ba;
+        }
+
+        li {
+          font-size: 2rem;
+          font-weight: 600;
+          &:last-child {
+            margin-right: 2rem;
+          }
+        }
+      }
+
+      .link:hover,
+      .link:active {
+        text-decoration: none;
+        color: #222;
+
+        li {
+          font-size: 2rem;
+          font-weight: 600;
+          &:last-child {
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .navMenu {
+    display: none;
+    background: none;
+    border: none;
+
+    ion-icon {
+      font-size: 4.8rem;
+      color: red;
+
+      &[name="close"] {
+        display: none;
+      }
+    }
+  }
+}

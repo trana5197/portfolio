@@ -1,0 +1,77 @@
+.contact-container {
+  max-width: 120rem;
+  margin: 5rem auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  .info {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      margin-left: 3rem;
+
+      li {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        color: #777;
+
+        transition: all 0.3s;
+
+        &:hover {
+          color: #fff;
+          font-weight: 500;
+        }
+
+        ion-icon {
+          font-size: 3.2rem;
+        }
+      }
+
+      li:hover {
+        transform: translateX(3rem) scale(1.1);
+      }
+
+      .link:link,
+      .link:visited {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  .input-box {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    textarea {
+      padding: 1.5rem 3rem;
+      width: 100%;
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      border-radius: 9px;
+      border: solid 1px #777;
+      resize: vertical;
+
+      &::placeholder {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #ccc;
+      }
+    }
+  }
+  .form {
+    margin-right: 5rem;
+  }
+}
