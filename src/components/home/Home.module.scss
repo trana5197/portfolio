@@ -15,6 +15,31 @@
 
     .info {
       animation: moveInLeft 1s ease-in;
+
+      .linkBox {
+        .resume:link,
+        .resume:visited {
+          text-decoration: none;
+          background-color: #22b8cf;
+          padding: 1rem 4.8rem;
+          border-radius: 100px;
+          color: #fff;
+
+          transition: all 0.3s;
+        }
+
+        .resume:hover {
+          background-color: #1fa6ba;
+          transform: translateY(-3px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .resume:active {
+          background-color: #1fa6ba;
+          transform: translateY(-1px);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
     }
 
     .heading-primary {

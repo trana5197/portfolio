@@ -1,9 +1,11 @@
-import Button from "../../reusable/button/Button";
+// import Button from "../../reusable/button/Button";
 import ContactMe from "../contactMe/ContactMe";
 
 import classes from "./Home.module.scss";
 
 import manLaptop from "./../../img/manLaptop.svg";
+
+import resume from "./../../pdf/Tarun_Rana_Resume.pdf";
 
 const education = [
   {
@@ -40,8 +42,15 @@ const Home = () => {
             passion for software development make me a strong candidate for any
             software engineering role.
           </p>
-          <div>
-            <Button>Resume</Button>
+          <div className={classes.linkBox}>
+            <a
+              className={classes.resume}
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
           </div>
         </div>
         <div>
