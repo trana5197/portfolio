@@ -7,11 +7,11 @@ const exp = [
     description: [
       " Worked closely with the client to generate a wireframe and initial prototype.",
       "Designed UI/UX (responsive website) using HTML5, JavaScript and CSS3 Media queries for the front-end site.",
-      "Developed a Web Application utilizing Laravel API (PHP frameworks) to develop backend architecture.",
+      "Developed a Web Application utilizing Node.js API to develop backend architecture.",
       "Designed a Dashboard using Laravel so that admin can easily create, read, remove, or update users from the database.",
-      "Implemented API authentication using the Sanctum Laravel package for providing a safe route for logged-in users.",
+      "Implemented API authentication using the JWT package for providing a safe route for logged-in users.",
     ],
-    keyword: "HTML5, CSS3, JavaScript, Laravel (PHP)",
+    keyword: "HTML5, CSS3, JavaScript, Node.js (Express)",
   },
 ];
 

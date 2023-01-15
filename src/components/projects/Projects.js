@@ -14,7 +14,7 @@ const projects = [
       `Website focused on adding students who can create their clubs, and blogs, and do real-time chat.`,
       `Blog was developed using WordPress.`,
     ],
-    keywords: "React.js, Laravel, MySQL, WordPress, RESTful API.",
+    keywords: "React.js, Laravel (PHP), MySQL, WordPress, RESTful API.",
     github: "https://github.com/trana5197/marketplace-laravelAPI",
   },
   {
