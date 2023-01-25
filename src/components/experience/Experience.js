@@ -5,13 +5,14 @@ const exp = [
     id: "ed1",
     name: "Kings United, Aditi Tracking",
     description: [
-      " Worked closely with the client to generate a wireframe and initial prototype.",
-      "Designed UI/UX (responsive website) using HTML5, JavaScript and CSS3 Media queries for the front-end site.",
-      "Developed a Web Application utilizing Node.js API to develop backend architecture.",
-      "Designed a Dashboard using Laravel so that admin can easily create, read, remove, or update users from the database.",
-      "Implemented API authentication using the JWT package for providing a safe route for logged-in users.",
+      "Built a Dashboard so that admins could apply basic CRUD operations on the database.",
+      "Worked closely with the client to generate a wireframe and initial prototype to refine user interface behaviors.",
+      "Designed a responsive website using media queries for the front-end site.",
+      "Developed RESTful APIs that served data to the front end based on dynamically chosen user inputs that handled over 1000 concurrent users.",
+      "Implemented authentication using the JWT package for providing a safe route for logged-in users.",
+      "A connection between MongoDB and Node.js (express) was created with the help of the mongoose library.",
     ],
-    keyword: "HTML5, CSS3, JavaScript, Node.js (Express)",
+    keyword: "HTML5, SASS, JavaScript, Node.js, MongoDB",
   },
 ];
 

@@ -34,13 +34,9 @@ const Home = () => {
             Software Engineer / Full-Stack Developer
           </h3>
           <p className="margin-bottom-md">
-            Software developer with one year of experience in Web development, I
-            am enthusiastic about using my proven skills to excel as a software
-            engineer. I have a strong ability and willingness to learn new
-            technologies and am always looking for opportunities to expand my
-            knowledge and skill set. I am confident that my experience and
-            passion for software development make me a strong candidate for any
-            software engineering role.
+            Enthusiastic Software Engineer with professional experience in
+            Software Development and a strong ability and willingness to learn
+            new technologies to deliver better solutions.
           </p>
           <div className={classes.linkBox}>
             <a
