@@ -29,7 +29,7 @@ const Home = () => {
     <div className={classes["home"]}>
       <div className={classes["home__summary"]}>
         <div className={classes["home__summary-info"]}>
-          <h1 className={base["heading-primary"]}>Hi, I'm Tarun Rana</h1>
+          <h1 className={base["heading-primary"]}>"Hi, I'm Tarun Rana"</h1>
           <h3 className={base["heading-tertiary"]}>
             Software Engineer / Full-Stack Developer
           </h3>

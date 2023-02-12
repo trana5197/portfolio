@@ -6,11 +6,9 @@ import NavBar from "./components/navBar/NavBar";
 import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
 
-import classes from "./App.module.scss";
-
 const App = () => {
   return (
-    <div className={classes["app-container"]}>
+    <div>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
