@@ -4,7 +4,7 @@ import { useState } from "react";
 import classes from "./NavBar.module.scss";
 
 const NavBar = () => {
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   const openMenu = () => {
     setIsMobile(false);
