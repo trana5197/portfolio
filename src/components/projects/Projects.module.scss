@@ -1,56 +1,57 @@
-.project-container {
-  max-width: 120rem;
-  margin: 10rem auto;
+@import "./../../variables.scss";
 
-  display: flex;
-  flex-direction: column;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80rem, 1fr));
   gap: 3rem;
 
-  .card {
-    background-color: #eee;
-    color: #000;
-    padding: 5rem;
-    border-radius: 9px;
+  margin: 7rem;
 
-    display: flex;
-    flex-direction: column;
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: 1fr;
 
-    transition: all 0.3s;
+    margin: 5rem 2rem;
+  }
 
-    ul {
-      li {
-        line-height: 1.5;
-        &:last-child {
-          margin-bottom: 1rem;
-        }
-      }
-    }
-
-    .keyword {
-      font-style: italic;
-      font-weight: 600;
-      margin-bottom: 2rem;
-    }
-
-    .heading-secondary {
-      font-size: 2.4rem;
-      margin-bottom: 3.2rem;
-      text-transform: uppercase;
-    }
-
-    .link:link,
-    .link:visited {
-      font-size: 2.2rem;
-      text-decoration: none;
-      color: #555;
-    }
-    .link:hover,
-    .link:active {
-      color: #222;
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: 7rem;
     }
   }
 
-  .card:hover {
-    transform: translateY(-0.8rem) scale(1.1);
+  &__lists {
+    margin-top: 4rem;
+    margin-left: 5rem;
+  }
+
+  &__keyword {
+    margin-left: 5rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+
+    margin-left: 5rem;
+    background-color: $color-primary;
+    padding: 0.5rem;
+    color: $color-white;
+    text-decoration: none;
+
+    transition: all 0.2s;
+  }
+
+  &__link:hover {
+    background-color: $color-primary-dark-2;
+    transform: translateY(-0.2rem);
+  }
+
+  &__link:active {
+    transform: translateY(-0.1rem);
   }
 }

@@ -1,77 +1,95 @@
-.contact-container {
-  max-width: 120rem;
-  margin: 5rem auto;
+@import "./../../variables.scss";
+
+.contact {
+  max-width: 100rem;
+  margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  grid-template-columns: 0.7fr 1.3fr;
 
-  .info {
-    ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-      margin-left: 3rem;
+  padding: 5rem 0;
 
-      li {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        color: #777;
-
-        transition: all 0.3s;
-
-        &:hover {
-          color: #fff;
-          font-weight: 500;
-        }
-
-        ion-icon {
-          font-size: 3.2rem;
-        }
-      }
-
-      li:hover {
-        transform: translateX(3rem) scale(1.1);
-      }
-
-      .link:link,
-      .link:visited {
-        text-decoration: none;
-        color: inherit;
-      }
-    }
+  @media only screen and (max-width: $bp-large) {
+    padding: 5rem 3rem;
   }
 
-  .input-box {
+  @media only screen and (max-width: $bp-medium-large) {
+    grid-template-columns: 1fr;
+    row-gap: 7rem;
+
+    padding: 5rem 5rem;
+  }
+
+  &__infoAll {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    list-style: none;
 
-    label {
-      text-transform: uppercase;
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 0.8rem;
+    align-self: center;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 1.8rem;
+
+    transition: all 0.2s;
+
+    ion-icon {
+      font-size: 3rem;
     }
 
-    textarea {
-      padding: 1.5rem 3rem;
-      width: 100%;
-      font-size: 1.8rem;
-      margin-bottom: 3rem;
-      border-radius: 9px;
-      border: solid 1px #777;
-      resize: vertical;
+    &:hover {
+      transform: translateX(3rem) scale(1.1);
+      color: $color-primary-dark-1;
+    }
 
-      &::placeholder {
-        font-size: 1.8rem;
-        font-weight: 400;
-        color: #ccc;
-      }
+    &:hover &-link {
+      color: $color-primary-dark-1;
+    }
+
+    &-link:link,
+    &-link:visited {
+      text-decoration: none;
+      color: $color-grey-dark-2;
     }
   }
-  .form {
-    margin-right: 5rem;
+
+  &__form {
+    @media only screen and (max-width: $bp-medium-large) {
+      grid-row: 1 / 2;
+    }
+
+    &__input-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      label {
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+      }
+
+      textarea {
+        padding: 1.5rem 3rem;
+        width: 100%;
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+        border-radius: 9px;
+        border: solid 1px #777;
+        resize: vertical;
+
+        &::placeholder {
+          font-size: 1.6rem;
+          font-weight: 300;
+          color: #ccc;
+        }
+      }
+    }
   }
 }

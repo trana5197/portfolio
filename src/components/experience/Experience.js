@@ -1,4 +1,5 @@
 import classes from "./Experience.module.scss";
+import base from "./../../base.module.scss";
 
 const exp = [
   {
@@ -18,21 +19,23 @@ const exp = [
 
 const Experience = () => {
   return (
-    <div className={classes["exp-container"]}>
-      <h2 className={classes["heading-secondary"]}>
+    <div className={classes["exp"]}>
+      <h2 className={base["heading-secondary"]}>
         Web Developer &mdash; Mindise Pvt Ltd. Mumbai, India &mdash; (Apr 2020 -
         May 2021)
       </h2>
       {exp.map((el) => {
         return (
-          <div key={el.id} className={classes.card}>
-            <h3 className={classes["heading-tertiary"]}>Projects: {el.name}</h3>
-            <ul>
+          <div key={el.id} className={classes["exp__card"]}>
+            <h3 className={`${classes["heading-tertiary"]} ${base["ml-md"]}`}>
+              Projects: {el.name}
+            </h3>
+            <ul className={classes["exp__lists"]}>
               {el.description.map((desc) => {
                 return <li key={desc}>{desc}</li>;
               })}
             </ul>
-            <p className={classes.keyword}>{el.keyword}</p>
+            <p className={classes["exp__keyword"]}>{el.keyword}</p>
           </div>
         );
       })}

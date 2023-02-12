@@ -1,3 +1,5 @@
+@import "./../../variables.scss";
+
 .btn {
   font-size: 2rem;
   background-color: #22b8cf;
@@ -7,6 +9,8 @@
   border: none;
   border-radius: 100px;
   transition: all 0.3s;
+
+  cursor: pointer;
 
   position: relative;
 
@@ -28,7 +32,7 @@
     height: 100%;
     width: 100%;
     border-radius: 100px;
-    background-color: #1fa6ba;
+    background-color: $color-white;
 
     position: absolute;
     top: 0;

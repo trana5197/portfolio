@@ -1,4 +1,5 @@
 import classes from "./Skills.module.scss";
+import base from "./../../base.module.scss";
 
 const Skills = () => {
   const skills = [
@@ -55,15 +56,15 @@ const Skills = () => {
   ];
 
   return (
-    <div className={classes["skills-container"]}>
+    <div className={classes["skills"]}>
       {skills.map((el) => {
         return (
-          <div key={el.id}>
-            <h2 className={classes["heading-secondary"]}>{el.name}</h2>
-            <ul className={classes.box}>
+          <div key={el.id} className={classes["skills__container"]}>
+            <h2 className={base["heading-secondary"]}>{el.name}</h2>
+            <ul className={classes["skills__box"]}>
               {el.skill.map((s) => (
-                <li key={s} className={classes.skill}>
-                  <img className={classes.img} src={s} alt="img" />
+                <li key={s} className={classes["skills__skill"]}>
+                  <img className={classes["skills__img"]} src={s} alt="img" />
                 </li>
               ))}
             </ul>

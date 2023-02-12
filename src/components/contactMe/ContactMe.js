@@ -3,43 +3,43 @@ import Button from "../../reusable/button/Button";
 import Input from "../../reusable/input/Input";
 
 import classes from "./ContactMe.module.scss";
+import base from "./../../base.module.scss";
 
 const ContactMe = () => {
   return (
-    <div className={classes["contact-container"]}>
-      <div className={classes.info}>
-        <ul>
-          <li>
-            <ion-icon name="logo-linkedin"></ion-icon>
-            <Link
-              className={classes.link}
-              onClick={() =>
-                window.open("http://www.linkedin.com/in/tarunrana05")
-              }
-            >
-              LinkedIn
-            </Link>
-          </li>
-          <li>
-            <ion-icon name="logo-github"></ion-icon>
-            <Link
-              className={classes.link}
-              onClick={() => window.open("https://github.com/trana5197")}
-            >
-              Github
-            </Link>
-          </li>
-          <li>
-            <ion-icon name="mail"></ion-icon>
-            <p>Email:</p> <p>trana51997@gmail.com</p>
-          </li>
-          <li>
-            <ion-icon name="call"></ion-icon>
-            <p>Contact:</p> <p>(+1) 312-536-2293</p>
-          </li>
-        </ul>
-      </div>
-      <form className={classes.form}>
+    <div className={classes["contact"]}>
+      <ul className={classes["contact__infoAll"]}>
+        <li className={classes["contact__info"]}>
+          <ion-icon name="logo-linkedin"></ion-icon>
+          <Link
+            className={classes["contact__info-link"]}
+            onClick={() =>
+              window.open("http://www.linkedin.com/in/tarunrana05")
+            }
+          >
+            LinkedIn
+          </Link>
+        </li>
+        <li className={classes["contact__info"]}>
+          <ion-icon name="logo-github"></ion-icon>
+          <Link
+            className={classes["contact__info-link"]}
+            onClick={() => window.open("https://github.com/trana5197")}
+          >
+            Github
+          </Link>
+        </li>
+        <li className={classes["contact__info"]}>
+          <ion-icon name="mail"></ion-icon>
+          <span>Email:</span> <span>trana51997@gmail.com</span>
+        </li>
+        <li className={classes["contact__info"]}>
+          <ion-icon name="call"></ion-icon>
+          <span>Contact:</span> <span>(+1) 312-536-2293</span>
+        </li>
+      </ul>
+
+      <form className={classes["contact__form"]}>
         <Input
           id="name"
           label="Name"
@@ -54,7 +54,7 @@ const ContactMe = () => {
           name="email"
           placeholder="johndoe@example.com"
         />
-        <div className={classes["input-box"]}>
+        <div className={classes["contact__form__input-box"]}>
           <label htmlFor="message">Message</label>
           <textarea
             id="message"
@@ -63,7 +63,7 @@ const ContactMe = () => {
             placeholder="message..."
           />
         </div>
-        <div className="btn-container">
+        <div className={base["btn-container"]}>
           <Button>Submit</Button>
           <Button>Clear</Button>
         </div>

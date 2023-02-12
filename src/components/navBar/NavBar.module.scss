@@ -1,108 +1,129 @@
-.navbar-container {
-  background-color: #e9f8fa;
-  color: #222;
-  padding: 3rem 0;
-  max-width: 90%;
-  margin: 0 auto;
+@import "./../../variables.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 3rem;
+
+  background-color: $color-primary-light-2;
+
+  transition: all 0.5s ease;
+
+  &__left-head:link,
+  &__left-head:visited {
+    text-decoration: none;
+    color: $color-grey-dark-2;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 4.4rem;
+    }
+  }
+
+  &__left-head:hover,
+  &__left-head:active {
+    color: $color-primary-dark-2;
+  }
+
+  &__right {
+    list-style: none;
+    font-size: 2.2rem;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      gap: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-medium-large) {
+      gap: 1.5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+
+      transition: all 0.5s ease;
+    }
+
+    &-link:link,
+    &-link:visited {
+      text-decoration: none;
+      color: $color-grey-dark-2;
+    }
+
+    &-link:hover,
+    &-link:active {
+      text-decoration: none;
+      color: $color-primary-dark-2;
+    }
+
+    // &-cta:link,
+    // &-cta:visited {
+    //   padding: 1rem 6rem;
+    //   background-color: $color-primary;
+    //   text-decoration: none;
+    //   color: $color-white;
+    //   border-radius: 100px;
+
+    //   transition: all 0.2s;
+    // }
+
+    // &-cta:hover {
+    //   background-color: $color-primary-dark-2;
+    //   box-shadow: 0 2rem 4rem rgba($color-black, 0.15);
+    //   transform: translateY(-0.2rem);
+    // }
+
+    // &-cta:active {
+    //   transform: translateY(0.1rem);
+    // }
+  }
+}
+
+.navMenu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 7rem;
+  color: $color-grey-dark-2;
+
+  transition: all 0.5s ease;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: block;
+    margin-top: 1rem;
+
+    transition: all 0.5s ease;
+  }
+}
+
+.navbar__right-mobile {
+  position: absolute;
+  list-style: none;
+  background-color: $color-primary;
+  top: 16rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 15rem);
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 5rem;
+  margin-top: -1rem;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 5rem;
 
-  .heading-secondary {
-    font-size: 2.6rem;
-    font-weight: 900;
-    margin-left: 2rem;
-    text-transform: uppercase;
-    letter-spacing: -1px;
+  transition: all 0.5s ease;
 
-    .head:link,
-    .head:visited {
-      text-decoration: none;
-      color: inherit;
-    }
-    .head:hover,
-    .head:active {
-      text-decoration: none;
-      color: #222;
-    }
-  }
-
-  .navbar {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-
-    ul {
-      list-style: none;
-
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-
-      .link:link,
-      .link:visited {
-        text-decoration: none;
-        color: inherit;
-
-        .contact {
-          background-color: #22b8cf;
-          padding: 0.7rem 4.8rem;
-          border-radius: 100px;
-          color: #fff;
-
-          transition: all 0.3s;
-        }
-
-        .contact:hover {
-          background-color: #1fa6ba;
-          transform: translateY(-3px);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact:active {
-          background-color: #1fa6ba;
-          transform: translateY(-1px);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        li {
-          font-size: 2rem;
-          font-weight: 600;
-          &:last-child {
-            margin-right: 2rem;
-          }
-        }
-      }
-
-      .link:hover,
-      .link:active {
-        text-decoration: none;
-        color: #222;
-
-        li {
-          font-size: 2rem;
-          font-weight: 600;
-          &:last-child {
-            margin-right: 2rem;
-          }
-        }
-      }
-    }
-  }
-
-  .navMenu {
-    display: none;
-    background: none;
-    border: none;
-
-    ion-icon {
-      font-size: 4.8rem;
-      color: red;
-
-      &[name="close"] {
-        display: none;
-      }
-    }
-  }
+  z-index: 100;
 }

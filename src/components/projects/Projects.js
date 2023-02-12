@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import classes from "./Projects.module.scss";
+import base from "./../../base.module.scss";
 
 const projects = [
   {
@@ -67,27 +68,27 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className={classes["project-container"]}>
+    <div className={classes["projects"]}>
       {projects.map((el) => {
         return (
-          <div key={el.id} className={classes.card}>
-            <h2 className={classes["heading-secondary"]}>
+          <div key={el.id} className={classes["projects__card"]}>
+            <h2 className={base["heading-secondary"]}>
               {el.name} &mdash; ({el.date})
             </h2>
-            <ul>
+            <ul className={classes["projects__lists"]}>
               {el.description.map((desc) => {
                 return <li key={desc}>{desc}</li>;
               })}
             </ul>
-            <p className={classes.keyword}>{el.keywords}</p>
+            <p className={classes["projects__keyword"]}>{el.keywords}</p>
             <p>
               <Link
-                className={classes.link}
+                className={classes["projects__link"]}
                 onClick={() => {
                   window.open(el.github);
                 }}
               >
-                GitHub
+                GitHub &rarr;
               </Link>
             </p>
           </div>

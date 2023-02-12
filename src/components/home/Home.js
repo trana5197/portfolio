@@ -1,7 +1,7 @@
-// import Button from "../../reusable/button/Button";
 import ContactMe from "../contactMe/ContactMe";
 
 import classes from "./Home.module.scss";
+import base from "./../../base.module.scss";
 
 import manLaptop from "./../../img/manLaptop.svg";
 
@@ -12,7 +12,7 @@ const education = [
     id: "ed1",
     degree: "Master of Science in Computer Science",
     university: "University of Texas at Arlington, Texas, US",
-    complete: "May 2023 (Expected)",
+    complete: "Aug 2021 - May 2023",
     gpa: "3.75/4.0",
   },
   {
@@ -26,49 +26,51 @@ const education = [
 
 const Home = () => {
   return (
-    <div className={classes["home-container"]}>
-      <div className={classes.summary}>
-        <div className={classes.info}>
-          <h1 className={classes["heading-primary"]}>Hi, I'm Tarun Rana</h1>
-          <h3 className={classes["heading-tertiary"]}>
+    <div className={classes["home"]}>
+      <div className={classes["home__summary"]}>
+        <div className={classes["home__summary-info"]}>
+          <h1 className={base["heading-primary"]}>Hi, I'm Tarun Rana</h1>
+          <h3 className={base["heading-tertiary"]}>
             Software Engineer / Full-Stack Developer
           </h3>
-          <p className="margin-bottom-md">
+          <p
+            className={`${base["mb-md"]} ${classes["home__summary-info-para"]}`}
+          >
             Enthusiastic Software Engineer with professional experience in
             Software Development and a strong ability and willingness to learn
             new technologies to deliver better solutions.
           </p>
-          <div className={classes.linkBox}>
-            <a
-              className={classes.resume}
-              href={resume}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
-          </div>
+          <a
+            className={classes["home__summary-info-resume"]}
+            href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
         </div>
-        <div>
+        <div className={classes["home__summary-imgBox"]}>
           <img
-            className={classes.img}
+            className={classes["home__summary-img"]}
             src={manLaptop}
             alt="icon of man sitting on laptop"
           />
         </div>
       </div>
-      <h2 className={classes["heading-secondary"]}>Education</h2>
-      <div className={classes.education}>
+      <h2 className={`${base["heading-secondary"]}  ${base["mb-md"]}`}>
+        Education
+      </h2>
+      <div className={classes["home__education"]}>
         {education.map((el) => {
           return (
-            <div key={el.id} className={classes.card}>
-              <div>
+            <div key={el.id} className={classes["home__education-card"]}>
+              <div className={classes["home__education-card__info1"]}>
                 <p>
                   <span>{el.university}</span>
                 </p>
                 <p>{el.degree}</p>
               </div>
-              <div>
+              <div className={classes["home__education-card__info2"]}>
                 <p>
                   <span>{el.complete}</span>
                 </p>
@@ -79,7 +81,9 @@ const Home = () => {
         })}
       </div>
       <div>
-        <h2 className={classes["heading-secondary"]}>Contact Me</h2>
+        <h2 className={`${base["heading-secondary"]} ${base["mb-md"]}`}>
+          Contact Me
+        </h2>
         <ContactMe />
       </div>
     </div>

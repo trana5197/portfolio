@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -10,22 +12,17 @@ html {
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%; /* 8px / 16px = 0.50 = 50% */
+  }
 }
 
 body {
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
-  color: #fff;
+  color: #333;
   line-height: 1.6;
-  background-color: #000;
-}
-
-.btn-container {
-  display: flex;
-  gap: 2rem;
-}
-
-.margin-bottom-md {
-  margin-bottom: 4.8rem;
+  background-color: #eee;
 }
